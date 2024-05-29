@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomeScreen from './pages/HomeScreen';
 import HospitalScreen from './pages/HospitalScreen';
+import ContinuePage from './pages/Continue';
+import PresentationForm from './pages/Presentation';
+import Confirmation from './pages/Confirmation';
 import FlowChart from './pages/FlowChart';
 
 const App: React.FC = () => {
@@ -11,8 +14,11 @@ const App: React.FC = () => {
     <Router>
       <div className="App container mx-auto p-4">
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
+          {/* <Route path="/" element={<HomeScreen />} /> */}
           <Route path="/HospitalScreen" element={<HospitalScreen />} />
+          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/" element={<PresentationForm />} />
+          <Route path="/continue" element={<ContinuePage />} />
           <Route path="/FlowChart" element={<FlowChart />} />
         </Routes>
       </div>
